@@ -423,13 +423,13 @@ footer {
 
   .hero h2 {
     font-size: clamp(2.7rem, 11vw, 4.4rem);
-    line-height: 0.95;
+    line-height: 1.15;
     margin-bottom: 20px;
   }
 
   .hero p {
     font-size: clamp(1.15rem, 5vw, 1.5rem);
-    line-height: 1.15;
+    line-height: 1.30;
     max-width: 100%;
   }
 
@@ -468,6 +468,7 @@ footer {
 
   .showcase-text h2 {
     font-size: clamp(2.4rem, 10vw, 3.4rem);
+    line-height: 1.30;
   }
 
   .gallery-grid {
