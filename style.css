@@ -111,10 +111,10 @@ img {
   transform: translateY(-2px);
 }
 .hero-wrap {
-  background:
+  background: 
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.52)),
-    url("Pressure Washer.png") center/cover no-repeat;
-  padding: 40px 0 0;
+    url("Pressure Washer.png") center/cover no-repeat fixed;
+  padding: 40px 0 0px;
 }
 
 .hero {
@@ -386,26 +386,30 @@ footer {
 
 @media (max-width: 700px) {
   .header-inner {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 14px;
-    padding: 18px 0;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-areas:
+      "logo brand"
+      "socials socials";
+    gap: 8px 10px;
+    padding: 12px 0;
   }
 
-  .header-inner {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 14px;
-    padding: 18px 0;
+  .logo {
+    grid-area: logo;
   }
 
   .brand-name {
+    grid-area: brand;
     font-size: 1.8rem;
   }
-  .logo,
+
   .socials {
+    grid-area: socials;
     justify-content: center;
   }
+  
+  
 
   .hero {
     min-height: auto;
