@@ -13,7 +13,7 @@
   --sky: #87abc3;
   --white: #ffffff;
   --black: #111111;
-  --panel: rgba(15, 15, 15, 0.72);
+  --panel: rgba(15, 25, 15, 0.78);
 }
 
 html {
@@ -111,11 +111,29 @@ img {
   transform: translateY(-2px);
 }
 .hero-wrap {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.52)),
-    url("Pressure Washer.png") center/cover no-repeat fixed;
   padding: 40px 0 0px;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.52)),
+    url("Pressure Washer.png") center/cover no-repeat;
+}
+
+:root {
+  --navy-a: rgba(45, 52, 139, 0.85);
+  --green-a: rgba(79, 111, 45, 0.85);
+  --sky-a: rgba(135, 171, 195, 0.85);
+}
+
+.showcase-blue  { background: var(--navy-a); }
+.showcase-green { background: var(--green-a); }
+.showcase-sky   { background: var(--sky-a); }
+
 
 .hero {
   min-height: 420px;
@@ -228,9 +246,7 @@ img {
 
 .wave {
   line-height: 0;
-  margin-top: 0;
   margin-bottom: -2px;
-  /* no default color here anymore */
 }
 
 .wave svg {
@@ -239,22 +255,13 @@ img {
   height: 90px;
 }
 
-.wave path {
-  fill: currentColor;
-}
+.wave .from { fill: var(--from, transparent); }
+.wave .to   { fill: var(--to); }
 
-.wave.wave-blue {
-  color: var(--navy);
-}
-
-.wave.wave-green {
-  color: var(--green);
-}
-
-.wave.wave-sky {
-  color: var(--sky);
-}
-
+.wave-blue       { --to: var(--navy-a); }
+.wave-blue-green { --from: var(--navy-a);  --to: var(--green-a); }
+.wave-green-sky  { --from: var(--green-a); --to: var(--sky-a); }
+.wave-sky-white  { --from: var(--sky-a);   --to: #ffffff; }
 
 .service-showcase {
   padding: 90px 0 90px;
