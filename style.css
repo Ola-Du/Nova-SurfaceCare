@@ -91,7 +91,7 @@ img {
   top: 8px;
 }
  
-.btn {
+.learn-more-btn {
   display: inline-block;
   min-width: 145px;
   padding: 14px 24px;
@@ -106,7 +106,7 @@ img {
   transition: background 0.25s, color 0.25s;
 }
  
-.btn:hover {
+.learn-more-btn:hover {
   background: var(--white);
   color: #000;
 }
@@ -247,7 +247,7 @@ img {
   line-height: 1;
 }
 
-.service-card button {
+.service-card .learn-more-btn {
   margin-top: 22px;
   min-width: 145px;
   padding: 14px 24px;
@@ -260,7 +260,7 @@ img {
   transition: 0.25s;
 }
 
-.service-card button:hover {
+.service-card .learn-more-btn:hover {
   background: var(--white);
   color: #000;
 }
